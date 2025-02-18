@@ -1,5 +1,5 @@
 package country
 
-func getInfo() {
+func HandleGetRequest() {
 
 }
