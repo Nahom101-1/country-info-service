@@ -1,0 +1,5 @@
+package country
+
+func getInfo() {
+
+}
