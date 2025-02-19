@@ -8,15 +8,18 @@ const APIVersion = "/v1"
 // EmptyPath represents the base path for the API with no specific resource
 const EmptyPath = "/"
 
-// CountryInfoBasePath base path for country data endpoints
+// TwoLetterCountryCode YearRange Dynamic URL Arguments
+const TwoLetterCountryCode = "/{code}"
+const YearRange = "/{startYear}-{endYear}"
+
+// CountryInfoBasePath Country Info Endpoints
 const CountryInfoBasePath = "/countryInfo" + APIVersion
+const CountryInfoEndpoint = CountryInfoBasePath + TwoLetterCountryCode + "/info"
 
-// PopulationBasePath base path for population data endpoints
+// PopulationBasePath Population Endpoints
 const PopulationBasePath = "/population" + APIVersion
+const PopulationEndpoint = PopulationBasePath + TwoLetterCountryCode + YearRange
 
-// StatusBasePath  base path for service status endpoints
+// StatusBasePath Service Status Endpoints
 const StatusBasePath = "/status" + APIVersion
-
-const CountryInfoEndpoint = CountryInfoBasePath + "/info"
-const PopulationEndpoint = PopulationBasePath + "/population"
 const ServiceStatusEndpoint = StatusBasePath
