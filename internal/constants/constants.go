@@ -10,10 +10,10 @@ const EmptyPath = "/"
 
 // TwoLetterCountryCode YearRange Dynamic URL Arguments
 const TwoLetterCountryCode = "/{code}"
-const YearRange = "/{startYear}-{endYear}"
+const YearRange = "/{startYear}/{endYear}"
 
 // CountryInfoBasePath Country Info Endpoints
-const CountryInfoBasePath = "/countryInfo" + APIVersion
+const CountryInfoBasePath = "/countryinfo" + APIVersion
 const CountryInfoEndpoint = CountryInfoBasePath + TwoLetterCountryCode + "/info"
 
 // PopulationBasePath Population Endpoints

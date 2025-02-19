@@ -5,7 +5,8 @@ import (
 	"net/http"
 )
 
-func handler(w http.ResponseWriter, r *http.Request) {
+func Handler(w http.ResponseWriter, r *http.Request) {
+	fmt.Println(" Received request:", r.Method, r.URL.Path)
 	switch r.Method {
 	case http.MethodGet:
 		HandleGetRequest(w, r)
