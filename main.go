@@ -5,7 +5,7 @@ import (
 	"github.com/Nahom101-1/country-info-service/internal/constants"
 	"github.com/Nahom101-1/country-info-service/internal/handlers"
 	"github.com/Nahom101-1/country-info-service/internal/handlers/country"
-	"github.com/Nahom101-1/country-info-service/utils"
+	"github.com/Nahom101-1/country-info-service/internal/utils"
 	"github.com/gorilla/mux"
 	"log"
 	"net/http"
