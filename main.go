@@ -13,7 +13,7 @@ import (
 
 func main() {
 	port := utils.GetPort()
-	//end point handler
+	//end point handlers
 	r := mux.NewRouter()
 	//Empty path
 	r.HandleFunc(constants.EmptyPath, handlers.EmptyHandler)
