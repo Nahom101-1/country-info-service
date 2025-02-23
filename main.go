@@ -18,12 +18,11 @@ func main() {
 	r := mux.NewRouter()
 	//Empty path
 	r.HandleFunc(constants.EmptyPath, handlers.EmptyHandler)
-	fmt.Println(" Received request:", constants.CountryInfoEndpoint)
 	//Country info onnly allow get as method
 	r.HandleFunc(constants.CountryInfoEndpoint, country.Handler).Methods(http.MethodGet)
-
-	r.HandleFunc(constants.PopulationEndpoint, handlers.EmptyHandler)
-	r.HandleFunc(constants.ServiceStatusEndpoint, handlers.EmptyHandler)
+	// TODO: ... these functions PopulationEndpoint and ServiceStatusEndpoint
+	/*	r.HandleFunc(constants.PopulationEndpoint, handlers.EmptyHandler)
+		r.HandleFunc(constants.ServiceStatusEndpoint, handlers.EmptyHandler)*/
 
 	fmt.Println(" Starting server:, :", port, r)
 	//start server

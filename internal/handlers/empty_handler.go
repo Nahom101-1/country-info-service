@@ -6,11 +6,9 @@ import (
 	"net/http"
 )
 
-/* EmptyHandler serves as a default handler for invalid root path requests.*/
+// EmptyHandler serves as a default handler for invalid root path requests.*/
 func EmptyHandler(w http.ResponseWriter, r *http.Request) {
-
 	// Ensure interpretation as HTML by client (browser)
-
 	w.Header().Set("content-type", "text/html: charset=UTF-8")
 
 	// Offer information for redirection to paths
@@ -28,12 +26,12 @@ func EmptyHandler(w http.ResponseWriter, r *http.Request) {
 				<li><a href="%s">Service Status</a></li>
 			</ul>
 		</body>
-		</html>`, constants.CountryInfoBasePath, constants.PopulationBasePath, constants.StatusBasePath)
+		</html>`, constants.CountryInfoBasePath, constants.PopulationBasePath, constants.ServiceStatusEndpoint)
 
 	// Write output to client
 	_, err := fmt.Fprintf(w, output)
 	if err != nil {
-		//deal with error if any
+		// Display error if any
 		http.Error(w, "Error when returning output", http.StatusInternalServerError)
 		return
 	}

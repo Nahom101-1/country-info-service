@@ -12,14 +12,17 @@ const EmptyPath = "/"
 const TwoLetterCountryCode = "/{code}"
 const YearRange = "/{startYear}/{endYear}"
 
-// CountryInfoBasePath Country Info Endpoints
+// CountryInfoBasePath Country Info Base Path
 const CountryInfoBasePath = "/countryinfo" + APIVersion
+
+// CountryInfoEndpoint Country Info Endpoint
 const CountryInfoEndpoint = CountryInfoBasePath + TwoLetterCountryCode + "/info"
 
-// PopulationBasePath Population Endpoints
-const PopulationBasePath = "/population" + APIVersion
+// PopulationBasePath Population Info Base Path
+const PopulationBasePath = CountryInfoBasePath + "/population"
+
+// PopulationEndpoint Population End point
 const PopulationEndpoint = PopulationBasePath + TwoLetterCountryCode + YearRange
 
-// StatusBasePath Service Status Endpoints
-const StatusBasePath = "/status" + APIVersion
-const ServiceStatusEndpoint = StatusBasePath
+// ServiceStatusEndpoint Service Status Endpoints
+const ServiceStatusEndpoint = CountryInfoBasePath + "/status"
