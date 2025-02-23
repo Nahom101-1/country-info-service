@@ -13,8 +13,7 @@ import (
 
 func main() {
 	port := utils.GetPort()
-	//end point handlers
-	// TODO: handle dynamic URL
+	//end point handler
 	r := mux.NewRouter()
 	//Empty path
 	r.HandleFunc(constants.EmptyPath, handlers.EmptyHandler)
